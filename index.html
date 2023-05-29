@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Q1
+        function fizzBuzz(i) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                console.log("Fizzbuzz");
+            } else if (i % 3 == 0) {
+                console.log("Fizz");
+            } else if (i % 5 == 0) {
+                console.log("Buzz");
+            } else {
+                console.log("Pop");
+            }
+        }
+
+        fizzBuzz(49);
+        fizzBuzz(55); 
+        fizzBuzz(120); 
+        fizzBuzz(9999); 
+
+        //Q2
+        const prices = [12.99, 17.75, 88.12, 111.11, 77.09, 53.45];
+
+        function averager() {
+            let sum = 0;
+            for (let i = 0; i < prices.length; i++) {
+                sum += prices[i];
+            }
+            let average = sum / prices.length;
+            return average;
+        }
+
+        let result = averager(prices);
+        console.log(result);
+
+        //Q3  
+        function celToFah(celsius) {
+            let fahrenheit = (celsius * 9 / 5) + 32;
+            console.log(fahrenheit.toFixed(2));
+        } 
+        function celToKel (celsius) {
+            let kelvin = celsius + 273.15;
+            console.log(kelvin.toFixed(2));
+        }
+
+        celToFah(37.5);
+        celToFah(-40);
+        celToFah(0);
+        celToFah(100);
+        celToKel(173.13);
+        celToKel(-13);
+
+        //Q4
+        function pow (base, exponent) {
+            let result = 1;
+            for (let i = 0; i < exponent; i++) {
+                result *= base;
+            }
+            return result;
+        }
+        console.log(pow (2, 3));
+
+
+    </script>
+</body>
+</html>
